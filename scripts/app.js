@@ -219,12 +219,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Display the shape in the mini-grid display
     function displayShape() {
-        displaySquares.forEach(square =>{
+        displaySquares.forEach(square => {
             square.classList.remove('tetromino')
             square.style.backgroundColor = ''
         })
 
-        upNextTetrominoes[nextRandom].forEach(index =>{
+        upNextTetrominoes[nextRandom].forEach(index => {
             displaySquares[displayIndex + index].classList.add('tetromino')
             displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
         })

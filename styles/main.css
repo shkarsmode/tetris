@@ -4,9 +4,7 @@
 /* Zeroing */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box }
 
 /* Basic styles */
 html{
@@ -26,10 +24,7 @@ main{
     margin-left: 105px;
 }
 
-a{
-    color:rgba(251, 251, 251, 0.239);
-}
-
+a{ color:rgba(251, 251, 251, 0.239) }
 
 /* Preloader */
 .preloader {
@@ -55,10 +50,6 @@ a{
      position: relative;
  }
 
- .preloader div:first-child{
-     margin-bottom: 15px;
- }
-
  .preloader span{
     position: absolute;
     font-family: 'Ephesis', cursive;
@@ -76,30 +67,16 @@ a{
  .preloader img:hover {
     cursor: pointer;
     opacity: 1;
-}
-
- .preloader img:hover + span {
-    color: white;
  }
+
+ .preloader div:first-child{ margin-bottom: 15px }
+ .preloader img:hover + span { color: white }
 
  /* Keys */
- #keyup{
-    top: -60px;
- }
-
- #keyleft{
-    left: -130px;
-    top: -50px;
- }
-
- #keyright{
-    right: -130px;
-    top: -50px;
- }
-
- #keydown{
-    bottom: -60px;
- }
+ #keyup{ top: -60px }
+ #keyleft{ left: -130px; top: -50px }
+ #keyright{ right: -130px; top: -50px }
+ #keydown{ bottom: -60px }
 
  /* Headlines */
 h1{
@@ -146,13 +123,9 @@ button{
     border-radius: 5px;
 }
 
-button:hover{
-    box-shadow: 4px 4px 7px rgba(183, 206, 206, 0.507);
-}
+button:hover{ box-shadow: 4px 4px 7px rgba(183, 206, 206, 0.507) }
 
-.pause{
-    background-color: rgba(151, 179, 184, 0.301);
-}
+.pause{ background-color: rgba(151, 179, 184, 0.301) }
 
 /* Grids */
 .grid{
@@ -182,7 +155,6 @@ button:hover{
 
 .mini-grid div{
     border: 1px solid rgba(22, 22, 22, 0.205);
-
     width: 20px;
     height: 20px;
 }
@@ -211,6 +183,4 @@ ol{
     padding-left: 10px;
 }
 
-li > #text{
-    font-style: italic;
-}
+li > #text{ font-style: italic }
