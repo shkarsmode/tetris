@@ -17,8 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
         '#fbf445'
     ]
 
+    // Hide the preloader with instr
     setTimeout(() => preloader.style.display = 'none', 4000)
 
+    // Start new game
     newGameButton.addEventListener('click', newGame)
     function newGame() {
         startButton.style.display = 'block'
@@ -155,11 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
     }
 
-    // freeze function
+    // Freeze function
     function freeze() {
         if (current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
             current.forEach(index => squares[currentPosition + index].classList.add('taken'))
-            // start a new tetromino fall
+            // Start a new tetromino fall
             random = nextRandom
             nextRand()
             current = theTetrominoes[random][currentRotation]
@@ -175,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nextRandom = Math.floor(Math.random() * theTetrominoes.length)
     }
 
-    // move the tetromino left
+    // Move the tetromino
     function moveLeft() {
         undraw()
         const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
@@ -201,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         draw()
     }
 
-    // show up-next tetromino in mini-grid
+    // Show up-next tetromino in mini-grid
     const displaySquares = Array.from(document.querySelectorAll(".mini-grid div"))
     const displayWidth = 4
     const displayIndex = 1
@@ -220,7 +222,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displaySquares.forEach(square =>{
             square.classList.remove('tetromino')
             square.style.backgroundColor = ''
-
         })
 
         upNextTetrominoes[nextRandom].forEach(index =>{
@@ -228,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
             displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
         })
     }
+
     nextRand()
 
     // Add score
@@ -248,6 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
     // Game over
     function gameOver() {
         if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
@@ -264,9 +267,6 @@ document.addEventListener('DOMContentLoaded', () => {
             scoreTable.insertBefore(li, scoreTable.children[0])
         }
     }
-
-
-
 })
 
 
