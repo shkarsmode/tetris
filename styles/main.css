@@ -12,12 +12,6 @@ html{
     color: rgba(255, 255, 255, 0.726);
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 main{
     display: flex;
     column-gap: 25px;

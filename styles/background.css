@@ -1,4 +1,7 @@
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     height: 100vh;
     font-weight: 100;
@@ -157,9 +160,7 @@ button:hover{
   left: 85%;
 }
 
-button:focus{
-  outline: none;
-}
+button:focus{ outline: none }
 
 @-webkit-keyframes floatUp{
   0%{top: 100vh; opacity: 0;}
