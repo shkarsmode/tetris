@@ -134,7 +134,6 @@ button:hover{ box-shadow: 4px 4px 7px rgba(183, 206, 206, 0.507) }
 .grid div{
     height: 20px;
     width: 20px;
-    /* background-color: brown; */
     border: 1px solid rgba(22, 22, 22, 0.205);
 }
 
