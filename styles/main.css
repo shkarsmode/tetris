@@ -1,0 +1,219 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Gemunu+Libre&display=swap');
+
+/* Zeroing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Preloader */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url('../images/default.gif');
+    background-repeat: no-repeat; 
+    background-color: rgb(211, 180, 211);
+    background-position: center;
+ }
+
+ .preloader div div{
+     display: flex;
+     justify-content: center;
+     column-gap: 25px;
+     position: relative;
+ }
+
+ .preloader div:first-child{
+     margin-bottom: 15px;
+ }
+
+ .preloader span{
+    position: absolute;
+    font-family: 'Ephesis', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color:rgba(0, 0, 0, 0.746)
+
+ }
+
+ .preloader img{
+    box-shadow: 0px 5px 5px 6px rgb(131, 109, 131);
+    opacity: 0.9;
+ }
+
+ .preloader img:hover {
+    /* box-shadow: 0px 5px 5px 6px rgb(97, 81, 97); */
+    cursor: pointer;
+    opacity: 1;
+}
+
+ .preloader img:hover + span {
+    color: white;
+ }
+
+ #keyup{
+    top: -60px;
+ }
+
+ #keyleft{
+    left: -130px;
+    top: -50px;
+ }
+
+ #keyright{
+    right: -130px;
+    top: -50px;
+ }
+
+ #keydown{
+    bottom: -60px;
+ }
+
+html{
+    background-color: rgb(229, 255, 255);
+    color: rgba(255, 255, 255, 0.726);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-family: 'Ephesis', cursive;
+    font-size: 60px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    height: 100px;
+}
+
+h3{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 150px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 2px 2px 7px rgb(180, 200, 200);
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+button:hover{
+    box-shadow: 4px 4px 7px rgba(183, 206, 206, 0.507);
+}
+
+.pause{
+    background-color: rgba(151, 179, 184, 0.301);
+}
+
+main{
+    display: flex;
+    column-gap: 25px;
+    margin-left: 105px;
+}
+
+
+.grid{
+    flex-wrap: wrap;
+    display: flex;
+    width: 200px;
+    height: 400px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0px 0px 5px 2px rgb(197, 218, 218);
+}
+
+.grid div{
+    height: 20px;
+    width: 20px;
+    /* background-color: brown; */
+    border: 1px solid rgba(22, 22, 22, 0.205);
+}
+
+.mini-grid{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    flex-wrap: wrap;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0px 0px 5px 2px rgba(211, 209, 209, 0.781);
+}
+
+.mini-grid div{
+    border: 1px solid rgba(22, 22, 22, 0.205);
+
+    width: 20px;
+    height: 20px;
+}
+
+.tetromino{
+    background-color: cadetblue;
+    border: 3px solid black;
+}
+
+.score{
+    margin-left: -125px;
+    width: 100px
+}
+
+.score span{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ol{
+    font-family: 'Gemunu Libre', sans-serif;
+    padding-left: 10px;
+}
+
+li > #text{
+    font-style: italic;
+}
+
+br{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+h1 span{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 20px;
+    bottom: 15%;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 100;
+}
+
+a{
+    color:rgba(251, 251, 251, 0.239);
+    
+}
