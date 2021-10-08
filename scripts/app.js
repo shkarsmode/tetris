@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 10
     let nextRandom = 0
     let score = 0
+    let prevMove = null;
     const colors = [
         '#de1b1b',
         '#646f6f',
@@ -136,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Move down function
     function moveDown() {
         undraw()
+        moveOut = currentPosition;
         currentPosition += width
         draw()
         freeze()
@@ -166,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nextRand()
             current = theTetrominoes[random][currentRotation]
             currentPosition = 3
-            draw()
+            setTimeout(() => draw(), 0.2)
             displayShape()
             addScore()
             gameOver()
@@ -185,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (current.some(index => squares[currentPosition + index].classList.contains('taken')))
             currentPosition++
         draw()
+        prevMove = "left"
     }
 
     function moveRight() {
@@ -194,26 +197,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (current.some(index => squares[currentPosition + index].classList.contains('taken')))
             currentPosition--
         draw()
+        prevMove = "right"
     }
 
+    let moveOut;
     function rotate() {
         undraw()
         currentRotation = ++currentRotation == 4 ? 0 : currentRotation
+        let temp = current;
         current = theTetrominoes[random][currentRotation] //current
 
         let [rightCount, leftCount] = [0,0]
         let arr = []
-        
-        for(let i = 0; i < 4; i++){
-            arr.push(Number(String(currentPosition + current[i]).slice(-1)))
-            if(arr[i] > 4) rightCount++;
-            else leftCount++;
-        }
-        let temp2 = currentPosition;
 
-        console.log(Number(String(currentPosition).slice(-1)))
-        console.log(arr.indexOf(0) != -1 && arr.indexOf(9) != -1)
+        for(let i = 0; i < 4; i++) 
+        arr.push(Number(String(currentPosition + current[i]).slice(-1)))
 
+        if(arr.indexOf(0) != -1 && arr.indexOf(9) != -1) current = temp;
 
         draw()
     }
