@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     // Hide the preloader with instr
-    setTimeout(() => preloader.style.display = 'none', 4000)
+    setTimeout(() => preloader.style.display = 'none', 000)
 
     // Start new game
     newGameButton.addEventListener('click', newGame)
@@ -199,7 +199,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function rotate() {
         undraw()
         currentRotation = ++currentRotation == 4 ? 0 : currentRotation
-        current = theTetrominoes[random][currentRotation]
+        current = theTetrominoes[random][currentRotation] //current
+
+        let [rightCount, leftCount] = [0,0]
+        let arr = []
+        
+        for(let i = 0; i < 4; i++){
+            arr.push(Number(String(currentPosition + current[i]).slice(-1)))
+            if(arr[i] > 4) rightCount++;
+            else leftCount++;
+        }
+        let temp2 = currentPosition;
+
+        console.log(Number(String(currentPosition).slice(-1)))
+        console.log(arr.indexOf(0) != -1 && arr.indexOf(9) != -1)
+
+
         draw()
     }
 
