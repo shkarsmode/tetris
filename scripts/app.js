@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     // Hide the preloader with instr
-    setTimeout(() => preloader.style.display = 'none', 000)
+    setTimeout(() => preloader.style.display = 'none', 4000)
 
     // Start new game
     newGameButton.addEventListener('click', newGame)

@@ -64,6 +64,8 @@ a{ color:rgba(251, 251, 251, 0.239) }
  }
 
  .preloader div:first-child{ margin-bottom: 15px }
+ .preloader div span, .preloader div div{ transition: all 1s; -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; -o-transition: all 1s;
+}
  .preloader img:hover + span { color: white }
 
  /* Keys */
@@ -177,3 +179,25 @@ ol{
 }
 
 li > #text{ font-style: italic }
+
+/* Media-query */
+
+@media (max-width: 545px)  {
+    .preloader div div{
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+    }
+    .preloader div:first-child{ margin-bottom: 0px }
+
+}
+
+@media (max-width: 790px) {
+    #keyup{ top: -60px }
+    #keyleft{ left: -55px; top: -50px }
+    #keyright{ right: -55px; top: -50px }
+    #keydown{ bottom: -60px }
+}
+
